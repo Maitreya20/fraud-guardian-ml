@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				fraud: {
+					DEFAULT: 'hsl(348, 100%, 61%)',
+					light: 'hsl(348, 100%, 93%)',
+					dark: 'hsl(348, 100%, 40%)'
+				},
+				legitimate: {
+					DEFAULT: 'hsl(171, 100%, 41%)',
+					light: 'hsl(171, 100%, 93%)',
+					dark: 'hsl(171, 100%, 30%)'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'gradient-move': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.85' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'gradient-move': 'gradient-move 8s ease infinite',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-in-up': 'fade-in-up 0.7s ease-out',
+				'pulse-subtle': 'pulse-subtle 3s infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			fontFamily: {
+				sans: ['SF Pro Display', 'Inter', 'sans-serif'],
+				mono: ['SF Mono', 'monospace']
+			},
+			backdropFilter: {
+				'none': 'none',
+				'blur': 'blur(20px)'
+			},
+			boxShadow: {
+				'glass': '0 10px 30px rgba(0, 0, 0, 0.08)',
+				'glass-sm': '0 2px 10px rgba(0, 0, 0, 0.05)',
+				'glass-hover': '0 10px 30px rgba(0, 0, 0, 0.12)',
 			}
 		}
 	},
