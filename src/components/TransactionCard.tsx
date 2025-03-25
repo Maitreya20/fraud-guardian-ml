@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { AlertTriangle, Calendar, Clock, CreditCard, MapPin, ArrowUpRight, Check } from 'lucide-react';
+import { AlertTriangle, Calendar, Clock, CreditCard, ArrowUpRight, Check } from 'lucide-react';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { Transaction } from '@/utils/mockData';
@@ -76,14 +76,6 @@ const TransactionCard: React.FC<TransactionCardProps> = ({ transaction, classNam
           <div className="flex items-center">
             <Clock size={16} className="text-muted-foreground mr-1.5" />
             <span>{formatTime(transaction.timestamp)}</span>
-          </div>
-          <div className="flex items-center">
-            <MapPin size={16} className="text-muted-foreground mr-1.5" />
-            <span>
-              {transaction.distance === 0 
-                ? "Online" 
-                : `${transaction.distance.toFixed(1)} mi away`}
-            </span>
           </div>
         </div>
 
