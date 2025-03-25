@@ -7,7 +7,6 @@ export interface Transaction {
   cardLast4: string;
   merchantName: string;
   merchantCategory: string;
-  distance: number; // Distance from home
   isWeekend: boolean;
   hour: number;
   isFraud: boolean;
@@ -22,7 +21,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Amazon.com",
     merchantCategory: "online_retail",
-    distance: 0,
     isWeekend: false,
     hour: 14,
     isFraud: false,
@@ -35,7 +33,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Grocery Store",
     merchantCategory: "grocery",
-    distance: 1.2,
     isWeekend: false,
     hour: 9,
     isFraud: false,
@@ -48,7 +45,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "ElectronicsXpress",
     merchantCategory: "electronics",
-    distance: 845.7,
     isWeekend: false,
     hour: 3,
     isFraud: true,
@@ -61,7 +57,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Netflix",
     merchantCategory: "subscription",
-    distance: 0,
     isWeekend: true,
     hour: 18,
     isFraud: false,
@@ -74,7 +69,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Coffee Shop",
     merchantCategory: "food",
-    distance: 0.8,
     isWeekend: true,
     hour: 7,
     isFraud: false,
@@ -87,7 +81,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Tech Gadgets",
     merchantCategory: "electronics",
-    distance: 432.1,
     isWeekend: false,
     hour: 22,
     isFraud: true,
@@ -100,7 +93,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "Gas Station",
     merchantCategory: "fuel",
-    distance: 5.3,
     isWeekend: false,
     hour: 12,
     isFraud: false,
@@ -113,7 +105,6 @@ export const sampleTransactions: Transaction[] = [
     cardLast4: "7895",
     merchantName: "DigitalStore",
     merchantCategory: "electronics",
-    distance: 789.2,
     isWeekend: false,
     hour: 1,
     isFraud: true,
@@ -124,7 +115,6 @@ export const sampleTransactions: Transaction[] = [
 export const featureImportance = [
   { feature: "Transaction Amount", importance: 0.27 },
   { feature: "Time of Day", importance: 0.22 },
-  { feature: "Distance from Home", importance: 0.18 },
   { feature: "Merchant Category", importance: 0.15 },
   { feature: "Day of Week", importance: 0.10 },
   { feature: "Previous Activity", importance: 0.08 }

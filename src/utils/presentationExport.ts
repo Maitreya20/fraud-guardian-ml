@@ -24,11 +24,11 @@ export const exportProjectPresentation = () => {
     y: 1.8,
     w: '100%',
     h: 1.5,
-    fontSize: 54,
-    color: 'ffffff',
     fontFace: 'Arial',
     align: 'center',
     bold: true,
+    color: 'ffffff',
+    size: 54,
   });
   
   titleSlide.addText('Intelligent Fraud Detection System', {
@@ -36,10 +36,10 @@ export const exportProjectPresentation = () => {
     y: 3.3,
     w: '100%',
     h: 0.8,
-    fontSize: 24,
-    color: '3b82f6',
     fontFace: 'Arial',
     align: 'center',
+    color: '3b82f6',
+    size: 24,
   });
 
   // Introduction slide
@@ -49,19 +49,19 @@ export const exportProjectPresentation = () => {
     y: 0.5,
     w: '100%',
     h: 0.8,
-    fontSize: 32,
-    color: '0b1437',
     fontFace: 'Arial',
     bold: true,
+    color: '0b1437',
+    size: 32,
   });
   
   introSlide.addText([
-    { text: 'FraudGuard is an advanced fraud detection system that uses machine learning to identify and prevent fraudulent transactions in real-time. Key features include:', fontSize: 16, bullet: false },
-    { text: 'Real-time transaction monitoring and analysis', fontSize: 16, bullet: true },
-    { text: 'Machine learning-based fraud detection algorithms', fontSize: 16, bullet: true },
-    { text: 'Interactive dashboard with comprehensive analytics', fontSize: 16, bullet: true },
-    { text: 'Transaction risk assessment tool', fontSize: 16, bullet: true },
-    { text: 'Secure user authentication system', fontSize: 16, bullet: true },
+    { text: 'FraudGuard is an advanced fraud detection system that uses machine learning to identify and prevent fraudulent transactions in real-time. Key features include:', size: 16, bullet: false },
+    { text: 'Real-time transaction monitoring and analysis', size: 16, bullet: true },
+    { text: 'Machine learning-based fraud detection algorithms', size: 16, bullet: true },
+    { text: 'Interactive dashboard with comprehensive analytics', size: 16, bullet: true },
+    { text: 'Transaction risk assessment tool', size: 16, bullet: true },
+    { text: 'Secure user authentication system', size: 16, bullet: true },
   ], {
     x: 0.5,
     y: 1.5,
@@ -78,21 +78,21 @@ export const exportProjectPresentation = () => {
     y: 0.5,
     w: '100%',
     h: 0.8,
-    fontSize: 32,
-    color: '0b1437',
     fontFace: 'Arial',
     bold: true,
+    color: '0b1437',
+    size: 32,
   });
   
   techSlide.addText([
-    { text: 'Frontend', fontSize: 20, bold: true, bullet: false },
-    { text: 'React with TypeScript for type safety', fontSize: 16, bullet: true },
-    { text: 'Tailwind CSS & shadcn/ui for responsive interface', fontSize: 16, bullet: true },
-    { text: 'Recharts for interactive data visualization', fontSize: 16, bullet: true },
-    { text: 'Framer Motion for smooth animations', fontSize: 16, bullet: true },
-    { text: '\nBackend', fontSize: 20, bold: true, bullet: false },
-    { text: 'Supabase for authentication and database', fontSize: 16, bullet: true },
-    { text: 'Machine learning model for fraud prediction', fontSize: 16, bullet: true },
+    { text: 'Frontend', size: 20, bold: true, bullet: false },
+    { text: 'React with TypeScript for type safety', size: 16, bullet: true },
+    { text: 'Tailwind CSS & shadcn/ui for responsive interface', size: 16, bullet: true },
+    { text: 'Recharts for interactive data visualization', size: 16, bullet: true },
+    { text: 'Framer Motion for smooth animations', size: 16, bullet: true },
+    { text: '\nBackend', size: 20, bold: true, bullet: false },
+    { text: 'Supabase for authentication and database', size: 16, bullet: true },
+    { text: 'Machine learning model for fraud prediction', size: 16, bullet: true },
   ], {
     x: 0.5,
     y: 1.5,
@@ -109,10 +109,10 @@ export const exportProjectPresentation = () => {
     y: 0.5,
     w: '100%',
     h: 0.8,
-    fontSize: 32,
-    color: '0b1437',
     fontFace: 'Arial',
     bold: true,
+    color: '0b1437',
+    size: 32,
   });
   
   // Add chart with sample data
@@ -120,7 +120,7 @@ export const exportProjectPresentation = () => {
   const fraudPercentage = (fraudDistribution.fraud / totalTransactions * 100).toFixed(3);
   
   statsSlide.addChart(
-    pres.ChartType.PIE, 
+    pres.ChartType.pie, 
     [
       {
         name: 'Genuine Transactions',
@@ -140,10 +140,10 @@ export const exportProjectPresentation = () => {
   );
   
   statsSlide.addText([
-    { text: 'Transaction Statistics', fontSize: 18, bold: true, bullet: false },
-    { text: `Total Transactions: ${totalTransactions.toLocaleString()}`, fontSize: 16, bullet: true },
-    { text: `Fraudulent Transactions: ${fraudDistribution.fraud.toLocaleString()}`, fontSize: 16, bullet: true },
-    { text: `Fraud Percentage: ${fraudPercentage}%`, fontSize: 16, bullet: true },
+    { text: 'Transaction Statistics', size: 18, bold: true, bullet: false },
+    { text: `Total Transactions: ${totalTransactions.toLocaleString()}`, size: 16, bullet: true },
+    { text: `Fraudulent Transactions: ${fraudDistribution.fraud.toLocaleString()}`, size: 16, bullet: true },
+    { text: `Fraud Percentage: ${fraudPercentage}%`, size: 16, bullet: true },
   ], {
     x: 5.5,
     y: 1.8,
@@ -160,10 +160,10 @@ export const exportProjectPresentation = () => {
     y: 0.5,
     w: '100%',
     h: 0.8,
-    fontSize: 32,
-    color: '0b1437',
     fontFace: 'Arial',
     bold: true,
+    color: '0b1437',
+    size: 32,
   });
   
   // Add chart for model performance
@@ -173,7 +173,7 @@ export const exportProjectPresentation = () => {
   }));
   
   modelSlide.addChart(
-    pres.ChartType.BAR,
+    pres.ChartType.bar,
     [
       {
         name: 'Metrics',
@@ -202,11 +202,11 @@ export const exportProjectPresentation = () => {
     y: 2.5,
     w: '100%',
     h: 1.5,
-    fontSize: 44,
-    color: 'ffffff',
     fontFace: 'Arial',
     align: 'center',
     bold: true,
+    color: 'ffffff',
+    size: 44,
   });
   
   conclusionSlide.addText('FraudGuard - Protecting Transactions with Machine Learning', {
@@ -214,10 +214,10 @@ export const exportProjectPresentation = () => {
     y: 4,
     w: '100%',
     h: 0.8,
-    fontSize: 20,
-    color: '3b82f6',
     fontFace: 'Arial',
     align: 'center',
+    color: '3b82f6',
+    size: 20,
   });
 
   // Save the presentation

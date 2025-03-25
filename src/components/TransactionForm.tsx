@@ -32,7 +32,6 @@ const formSchema = z.object({
   amount: z.coerce.number().positive().min(0.01, { message: "Amount must be greater than 0" }),
   merchantName: z.string().min(2, { message: "Merchant name is required" }),
   merchantCategory: z.string().min(1, { message: "Please select a category" }),
-  distance: z.coerce.number().min(0),
   hour: z.coerce.number().min(0).max(23),
   isWeekend: z.boolean().default(false),
 });
@@ -53,7 +52,6 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ className, onAnalyze 
       amount: 100,
       merchantName: "",
       merchantCategory: "",
-      distance: 0,
       hour: 12,
       isWeekend: false,
     },
@@ -75,10 +73,6 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ className, onAnalyze 
     
     // Transactions at unusual hours are more suspicious
     if (data.hour >= 0 && data.hour <= 5) fraudScore += 0.25;
-    
-    // Transactions far from home are more suspicious
-    if (data.distance > 500) fraudScore += 0.3;
-    else if (data.distance > 100) fraudScore += 0.15;
     
     // High-risk categories
     if (['electronics', 'jewelry', 'gift_card'].includes(data.merchantCategory)) {
@@ -173,25 +167,6 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ className, onAnalyze 
                       <SelectItem value="subscription">Subscription</SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
-              name="distance"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Distance from Home (miles)</FormLabel>
-                  <FormControl>
-                    <Input 
-                      type="number" 
-                      min="0" 
-                      placeholder="Distance in miles" 
-                      {...field} 
-                    />
-                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

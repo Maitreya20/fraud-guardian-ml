@@ -15,7 +15,6 @@ interface AnalysisResult {
   amount: number;
   merchantName: string;
   merchantCategory: string;
-  distance: number;
   hour: number;
   isWeekend: boolean;
   fraudProbability: number;
@@ -56,20 +55,6 @@ const Analyzer = () => {
         factor: 'Unusual Transaction Time',
         description: 'Transactions between midnight and 5 AM have higher fraud rates.',
         impact: 'high'
-      });
-    }
-    
-    if (data.distance > 500) {
-      factors.push({
-        factor: 'Unusual Transaction Location',
-        description: 'Transaction occurred far from typical locations.',
-        impact: 'high'
-      });
-    } else if (data.distance > 100) {
-      factors.push({
-        factor: 'Non-local Transaction',
-        description: 'Transaction occurred outside of normal activity range.',
-        impact: 'medium'
       });
     }
     
