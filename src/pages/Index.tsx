@@ -11,8 +11,7 @@ import {
   Fingerprint, 
   Clock,
   ArrowRight,
-  Info,
-  Download
+  Info
 } from 'lucide-react';
 import Hero from '@/components/Hero';
 import Navigation from '@/components/Navigation';
@@ -21,8 +20,6 @@ import TransactionCard from '@/components/TransactionCard';
 import ModelExplainer from '@/components/ModelExplainer';
 import { sampleTransactions } from '@/utils/mockData';
 import { staggerContainer, staggerItem } from '@/utils/transitions';
-import { exportProjectPresentation } from '@/utils/presentationExport';
-import { toast } from 'sonner';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -52,20 +49,6 @@ const Index = () => {
 
   // Select a subset of transactions for the homepage
   const featureTransactions = sampleTransactions.slice(2, 5);
-
-  const handleExportPresentation = () => {
-    try {
-      exportProjectPresentation();
-      toast.success('Presentation successfully exported', {
-        description: 'The PowerPoint file has been downloaded to your device.'
-      });
-    } catch (error) {
-      console.error('Error exporting presentation:', error);
-      toast.error('Failed to export presentation', {
-        description: 'There was an error generating the PowerPoint file.'
-      });
-    }
-  };
 
   return (
     <>
@@ -131,14 +114,9 @@ const Index = () => {
                 Our comprehensive dashboard gives you insight into transaction patterns and highlights
                 potential fraud. Track metrics in real-time and receive detailed analytics.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={() => navigate('/dashboard')} className="gap-2">
-                  View Dashboard <ArrowRight size={16} />
-                </Button>
-                <Button variant="outline" onClick={handleExportPresentation} className="gap-2">
-                  <Download size={16} /> Export Presentation
-                </Button>
-              </div>
+              <Button onClick={() => navigate('/dashboard')} className="gap-2">
+                View Dashboard <ArrowRight size={16} />
+              </Button>
             </motion.div>
             
             <motion.div
