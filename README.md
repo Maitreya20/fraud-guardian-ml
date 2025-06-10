@@ -165,6 +165,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using [Lovable](https://lovable.dev)**
+
 
 *Transform your fraud detection capabilities with AI-powered insights and real-time monitoring.*
