@@ -1,8 +1,6 @@
 
 # FraudGuard ML - AI-Powered Fraud Detection System
 
-[![Deploy with Lovable](https://lovable.dev/deploy-button.svg)](https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c)
-
 A sophisticated machine learning-powered fraud detection system built with React and TypeScript. FraudGuard ML provides real-time transaction analysis, risk assessment, and comprehensive fraud monitoring capabilities.
 
 ## 🚀 Features
