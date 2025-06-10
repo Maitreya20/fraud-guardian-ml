@@ -1,69 +1,170 @@
-# Welcome to your Lovable project
 
-## Project info
+# FraudGuard ML - AI-Powered Fraud Detection System
 
-**URL**: https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c
+[![Deploy with Lovable](https://lovable.dev/deploy-button.svg)](https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c)
 
-## How can I edit this code?
+A sophisticated machine learning-powered fraud detection system built with React and TypeScript. FraudGuard ML provides real-time transaction analysis, risk assessment, and comprehensive fraud monitoring capabilities.
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- **Real-time Fraud Detection**: Analyze transactions instantly with millisecond response times
+- **Interactive Dashboard**: Comprehensive analytics and monitoring interface
+- **Transaction Analyzer**: Input transaction details for immediate fraud risk assessment
+- **Machine Learning Models**: Advanced algorithms including Gradient Boosting and Anomaly Detection
+- **Risk Visualization**: Clear, intuitive charts and metrics for fraud patterns
+- **Responsive Design**: Optimized for desktop and mobile devices
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c) and start prompting.
+## 🎯 Demo
 
-Changes made via Lovable will be committed automatically to this repo.
+**Live Demo**: [https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c](https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c)
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18, TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Authentication**: Supabase (optional integration)
+- **Routing**: React Router DOM
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Installation
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Quick Start
 
-# Step 3: Install the necessary dependencies.
-npm install
+1. **Clone the repository**
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   ```
+   http://localhost:5173
+   ```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Hero.tsx        # Landing page hero section
+│   ├── Navigation.tsx  # App navigation
+│   └── ...
+├── pages/              # Main application pages
+│   ├── Index.tsx       # Landing page
+│   ├── Dashboard.tsx   # Main dashboard
+│   ├── Analyzer.tsx    # Transaction analyzer
+│   └── Auth.tsx        # Authentication page
+├── utils/              # Utility functions and data
+│   ├── mockData.ts     # Sample transaction data
+│   └── transitions.ts  # Animation configurations
+└── integrations/       # External service integrations
+    └── supabase/       # Supabase configuration
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Key Components
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Dashboard Features
+- **Fraud Statistics**: Real-time fraud detection metrics
+- **Feature Importance**: ML model insights and explanations
+- **Transaction Overview**: Comprehensive transaction monitoring
+- **Risk Alerts**: High-priority fraud notifications
 
-**Use GitHub Codespaces**
+### Transaction Analyzer
+- Input transaction details for instant analysis
+- Risk assessment with detailed explanations
+- Pattern recognition and anomaly detection
+- User-friendly fraud probability scoring
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Model Explanation
+- Interactive tabs explaining the ML algorithms
+- Feature importance visualization
+- Algorithm breakdown (Gradient Boosting, Anomaly Detection)
+- Educational content about fraud detection methods
 
-## What technologies are used for this project?
+## 🔧 Available Scripts
 
-This project is built with .
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment
 
-## How can I deploy this project?
+### Deploy with Lovable
+Click the deploy button at the top of this README to deploy instantly with Lovable.
 
-Simply open [Lovable](https://lovable.dev/projects/69eef114-67a5-4d32-9c31-c565c08acd7c) and click on Share -> Publish.
+### Custom Deployment
+The application can be deployed to any static hosting service:
 
-## I want to use a custom domain - is that possible?
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+2. **Deploy the `dist` folder** to your hosting service of choice:
+   - Vercel
+   - Netlify
+   - GitHub Pages
+   - AWS S3
+   - Any static hosting provider
+
+## 🔐 Authentication (Optional)
+
+This project includes optional Supabase integration for authentication. To enable:
+
+1. Set up a Supabase project
+2. Configure environment variables
+3. Update the Supabase client configuration
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🆘 Support
+
+- **Documentation**: [Lovable Docs](https://docs.lovable.dev/)
+- **Community**: [Discord Community](https://discord.com/channels/1119885301872070706/1280461670979993613)
+- **Issues**: Create an issue in this repository
+
+## 🔮 Future Enhancements
+
+- [ ] Real-time data integration
+- [ ] Advanced ML model training interface
+- [ ] Custom alert configurations
+- [ ] API endpoints for external integrations
+- [ ] Multi-language support
+- [ ] Enhanced mobile experience
+
+---
+
+**Built with ❤️ using [Lovable](https://lovable.dev)**
+
+*Transform your fraud detection capabilities with AI-powered insights and real-time monitoring.*
